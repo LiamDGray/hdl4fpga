@@ -21,7 +21,7 @@ use work.ssd1331_init_pack.all;
 
 architecture beh of ulx3s is
         constant width    : natural := 800;
-        constant height   : natural := 600;
+        constant height   : natural := 480;
         constant fps      : natural :=  60;
         constant pixel_hz : natural := F_modeline(width,height,fps)(8);
         --constant timing_id: videotiming_ids := pclk25_00m640x480at60;
@@ -29,7 +29,8 @@ architecture beh of ulx3s is
         --constant layout: display_layout := displaylayout_tab(oled96x64);
         --constant layout: display_layout := displaylayout_tab(lcd240x240);
         --constant layout: display_layout := displaylayout_tab(lcd480x272seg1);
-        constant layout: display_layout := displaylayout_tab(sd600x16fs);
+        constant layout: display_layout := displaylayout_tab(lcd800x480);
+        --constant layout: display_layout := displaylayout_tab(sd600x16fs);
         --constant layout: display_layout := displaylayout_tab(lcd1280x1024seg4);
         --constant layout: display_layout := displaylayout_tab(hd720);
         --constant pixel_hz: natural := modeline_data(timing_id)(8);
